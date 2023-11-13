@@ -293,25 +293,34 @@
 
   #imp {
     position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%);
+    bottom: 15px;
+    left: 3%;
     width: 100%;
-    text-align: center;
   }
   #imp span{
     color: white;
-    margin: 20px;
+    margin-right: 50px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-    font-size: 10px;
+    font-size: 15px;
     background-color:transparent;
   }
 
+  #imp span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
+  #mobile-browse{
+    display: none;
+  
+  
+  }
 
   #mobile-copycode{
     display: none;
   }
+
+
 
 
 
