@@ -58,6 +58,9 @@ CSS
     background-color: #317600;
   }
 
+
+  CODE BY THEGREENCRAFT
+
 </xmp>
         `;
         document.getElementById('code').innerHTML = codeText;
@@ -103,10 +106,55 @@ CSS
     color: black;
   }
 
+
+  CODE BY THEGREENCRAFT
+
 </xmp>
         `;
         document.getElementById('code').innerHTML = codeText;
         document.getElementById('code-h1').innerHTML = "PASSWORD INPUT";
         document.getElementById('testbox-center').innerHTML = '<input type="password" name="Password" id="password-border" placeholder="Password">';
+}
+
+
+
+
+function itm3() {
+    var codeText = `
+<xmp>
+HTML
+    
+<span class="loader1"></span>
+
+CSS
+
+.loader1 {
+    width: 58px;
+    height: 58px;
+    border: 5px solid #a0a0a0;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+
+    CODE BY THEGREENCRAFT
+
+</xmp>
+        `;
+        document.getElementById('code').innerHTML = codeText;
+        document.getElementById('code-h1').innerHTML = "LOADER";
+        document.getElementById('testbox-center').innerHTML = '<span class="loader1"></span>';
 }
 
