@@ -10,7 +10,7 @@ function scrollHorizontally(event) {
   var activeDiv = document.getElementById(activeDivId);
 
   if (activeDiv) {
-    activeDiv.scrollLeft -= (delta * 30);
+    activeDiv.scrollLeft -= (delta * 50);
   }
 }
 
@@ -186,3 +186,134 @@ CSS
         document.getElementById('testbox-center').innerHTML = '<span class="loader1"></span>';
 }
 
+
+
+
+
+function hoverEffect() {
+  document.getElementById('seebutton-circle').style.rotate = "45deg";
+  document.getElementById('seebutton-circle').style.transition = "all 1s";
+
+}
+
+function resetEffect() {
+  document.getElementById('seebutton-circle').style.rotate = "0deg";
+  document.getElementById('seebutton-circle').style.transition = "all 1s";
+}
+
+
+function itm21() {
+  var codeText = `
+<xmp>
+HTML
+  
+<div id="see-button" onmouseover="hoverEffect()" onmouseout="resetEffect()">
+<div id="seebutton-circle">+</div>
+<span>See more</span>
+</div>
+
+CSS
+
+#see-button{
+  width: 200px;
+  height: 40px;
+  background-color: transparent;
+  display: flex;
+  color: white;
+  transition: all 1s;
+  border-radius: 50px;
+
+}
+#see-button:hover{
+  background-color: rgb(182, 182, 182);
+  color: black;
+  width: 250px;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+#see-button span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}    
+
+#seebutton-circle{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  justify-items: center;
+  align-items: center;
+  display: grid;
+  font-size: 30px;
+  color: black;
+}
+
+
+JS
+
+function hoverEffect() {
+  document.getElementById('seebutton-circle').style.rotate = "45deg";
+  document.getElementById('seebutton-circle').style.transition = "all 1s";
+
+}
+
+function resetEffect() {
+  document.getElementById('seebutton-circle').style.rotate = "0deg";
+  document.getElementById('seebutton-circle').style.transition = "all 1s";
+}
+
+
+  CODE BY THEGREENCRAFT
+
+</xmp>
+      `;
+      document.getElementById('code').innerHTML = codeText;
+      document.getElementById('code-h1').innerHTML = "BUTTON";
+      document.getElementById('testbox-center').innerHTML = '<div id="see-button" onmouseover="hoverEffect()" onmouseout="resetEffect()"><div id="seebutton-circle">+</div><span>See more</span></div>';
+}
+
+
+
+function itm31() {
+  var codeText = `
+<xmp>
+HTML
+  
+<span class="loading-text"></span>
+
+CSS
+
+.loading-text{
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  animation: smokeOut 1s ease-in-out infinite alternate;
+  text-shadow: 0 0 1px white;
+}
+.loading-text:before {
+  content: "Loading";
+}
+
+@keyframes smokeOut {
+  100% {
+    opacity: 0.08;
+    filter: blur(5px);
+    letter-spacing: 4px;
+  }
+}
+
+
+  CODE BY THEGREENCRAFT
+
+</xmp>
+      `;
+      document.getElementById('code').innerHTML = codeText;
+      document.getElementById('code-h1').innerHTML = "LOAD TEXT";
+      document.getElementById('testbox-center').innerHTML = '<span class="loading-text"></span>';
+}
