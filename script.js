@@ -28,6 +28,35 @@ function closecode() {
 }
 
 
+function copyCode() {
+  // Elemente referenzieren
+  var codeElement = document.getElementById('code');
+  var copyButton = document.getElementById('mobile-copycode');
+
+  // Text aus dem Code-Element holen
+  var codeText = codeElement.innerText;
+
+  // Text in die Zwischenablage kopieren
+  navigator.clipboard.writeText(codeText)
+      .then(function() {
+          // Erfolgsmeldung
+          console.log('Code copied to clipboard');
+          
+          // Text des Buttons ändern
+          copyButton.innerText = 'Copied!';
+
+          // Optional: Nach einer kurzen Verzögerung den Text zurücksetzen
+          setTimeout(function() {
+              copyButton.innerText = 'Copy Code';
+          }, 2000); // 2000 Millisekunden (2 Sekunden) Verzögerung
+      })
+      .catch(function(err) {
+          // Fehlerbehandlung
+          console.error('Unable to copy code to clipboard', err);
+      });
+}
+
+
 
 //ITEMS
 
@@ -85,7 +114,6 @@ CSS
 #password-border{
     padding: 1%;
     border-radius: 7px;
-    width: 200px;
     background-color: transparent;
     border: rgb(134, 134, 134) 2px solid;
     transition: all 0.5s;
@@ -112,7 +140,7 @@ CSS
 </xmp>
         `;
         document.getElementById('code').innerHTML = codeText;
-        document.getElementById('code-h1').innerHTML = "PASSWORD INPUT";
+        document.getElementById('code-h1').innerHTML = "PASSWORD";
         document.getElementById('testbox-center').innerHTML = '<input type="password" name="Password" id="password-border" placeholder="Password">';
 }
 
