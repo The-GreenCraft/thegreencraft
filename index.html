@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F-CSS-E</title>
+    <title>FCSSE - HOME</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
+    <link rel="icon" type="x-icon" href="imgs/GREENY-LOGO.png">
     
 </head>
 <body>
@@ -13,10 +14,10 @@
             <img src="imgs/GREENY-LOGO.png" alt="logo" id="nav-logo">
             <div id="nav-points">
                 <span id="point-active">HOME</span>
-                <a href="sites/buttons.html"><span>BUTTONS</span></a>
-                <span>INPUTS</span>
-                <span>LOADERS</span>
-                <span>NAV/FOOTER</span>
+                <a href="buttons.html"><span>BUTTONS</span></a>
+                <a href="inputs.html"><span>INPUTS</span></a>
+                <a href="loaders.html"><span>LOADERS</span></a>
+                <a href="navfooter.html"><span>NAV/FOOTER</span></a>
             </div>
         </nav>
         <div id="burger">
@@ -24,6 +25,17 @@
             <div id="line2"></div>
             <div id="line3"></div>
             <div id="burger-link" onclick="burger_openmenu()"></div>
+        </div>
+        <div id="burger_menu">
+          <div id="burger_content">          
+            <span><a href="index.html" class="burger-a">HOME</a></span>
+            <span><a href="buttons.html" class="burger-a">BUTTONS</a></span>
+            <span><a href="inputs.html" class="burger-a">INPUTS</a></span>
+            <span><a href="loaders.html" class="burger-a">LOADERS</a></span>
+            <span><a href="navfooter.html" class="burger-a">NAV/FOOTER</a></span>
+          </div>
+
+
         </div>
         <h1 id="title" class="titleeffect">FREE CSS ELEMENTS</h1>
         <div id="tile-line"></div>
@@ -34,17 +46,17 @@
         <div class="container">
             <div class="große-div" id="div1" >
               <!-- Füge hier deine kleinen Divs ein -->
-              <div class="kleine-div" ondblclick="itm1(), opencode()">
+              <div class="kleine-div" onclick="showtip()" ondblclick="itm1(), opencode()">
                 <div class="itm">
                     <button id="button-green">CLICK</button>
                 </div>
               </div>
-              <div class="kleine-div" ondblclick="opencode(), itm2()">
+              <div class="kleine-div" onclick="showtip()" ondblclick="opencode(), itm2()">
                 <div class="itm">
                     <input type="password" name="Password" id="password-border" placeholder="Password">
                 </div>
               </div>
-              <div class="kleine-div" ondblclick="opencode(), itm3()">
+              <div class="kleine-div" onclick="showtip()" ondblclick="opencode(), itm3()">
                 <div class="itm">
                     <span class="loader1"></span>
                 </div>
@@ -66,7 +78,7 @@
         
             <div class="große-div" id="div2">
               <!-- Füge hier deine anderen kleinen Divs ein -->
-              <div class="kleine-div" ondblclick="opencode(), itm21()">
+              <div class="kleine-div" onclick="showtip()" ondblclick="opencode(), itm21()">
                 <div class="itm">
                     <div id="see-button" onmouseover="hoverEffect()" onmouseout="resetEffect()">
                       <div id="seebutton-circle">+</div>
@@ -91,7 +103,7 @@
               <!-- ... weitere kleine Divs ... -->
             </div>
             <div class="große-div" id="div3" onmouseenter="setActiveDiv('div3')">
-              <div class="kleine-div" ondblclick="opencode(), itm31()">
+              <div class="kleine-div" onclick="showtip()" ondblclick="opencode(), itm31()">
                 <div class="itm">
                   <span class="loading-text"></span>
                 </div>
@@ -147,6 +159,10 @@
         <span class="loader"></span>
 
         <h4>V.1.3 | U-17-11-23</h4>
+
+        <div id="tip">
+          <h2>Doppelklicke um den Code zu öffnen!</h2>
+        </div>
 
 
 

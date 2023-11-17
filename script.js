@@ -7,11 +7,26 @@ window.addEventListener('load', () => {
   }, 1); 
 });
 
+var i = 0;
+function showtip(){
+  if (i <= 2){
+    const tipbox = document.getElementById("tip");
+    tipbox.style.display = "flex";
+    setTimeout(function() {
+      tipbox.style.display = "none";
+  }, 4000); 
+  i += 1;
+  }
+
+}
 
 
 let dropvar = 0;
 function burger_openmenu(){
     if(dropvar == 0){
+
+      const menu = document.getElementById('burger_menu');
+      menu.style.right = 0;
 
     var line1 = document.getElementById('line1');
     line1.style.transform = "rotate(45deg)";
@@ -30,6 +45,8 @@ function burger_openmenu(){
 
 
     }else{
+      const menu = document.getElementById('burger_menu');
+      menu.style.right = "-100%";
 
     var line1 = document.getElementById('line1');
     line1.style.transform = "rotate(0deg)";

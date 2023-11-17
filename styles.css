@@ -464,10 +464,44 @@ h4{
   right: 50px;
 }
 
+#tip{
+  width: 30%;
+  height: 70px;
+  background-color: rgb(150, 62, 62);
+  filter: drop-shadow(0px 0px 50px black);
+  position: fixed;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 20px;
+  display: none;
+}
 
+h2{
+  color: rgb(249, 246, 246);
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#burger_menu{
+  display: none;
+}
 
-
-
+#title-us{
+  position: absolute;
+  top: 100px;
+  left: 15%;
+  transform: translate(-50%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #FFFFFF;
+  font-size: 70px;
+  text-align: left;
+  line-height: 1.8;
+  width: 200px;
+}
 
 
 
@@ -672,6 +706,19 @@ h4{
     line-height: 1.8;
     width: 200px;
 }
+#title-us{
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.8;
+  width: 200px;
+}
+
 
 #tile-line{
     width: 300px;
@@ -690,6 +737,7 @@ flex-shrink: 0;
 position: fixed;
 top: 18px;
 right: 20px;
+z-index: 99999;
 
 }
 #burger-link{
@@ -703,7 +751,55 @@ opacity: 0.2;
 z-index: 99999;
 }
 
+#burger-link:hover{
+  cursor: pointer;
+}
+.burger-a{
+  color: white;
+}
+#burger_menu{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.637);
+  z-index: 9999;
+  backdrop-filter: blur(25px);
+  transition: right  0.5s;
 
+}
+
+#burger_content{
+  width: 500px;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  position: absolute;
+  color: white;
+  height: 400px;
+  flex-wrap: wrap;
+  text-align: center;
+  display: flex;
+  justify-items: center;
+}
+#burger_content span {
+  left: 50%;
+  transform: translate(-50%);
+  width: 300px;
+  height: 50px;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#burger_content span:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
 #line1{
     position: absolute;
     height: 5px;
@@ -714,6 +810,8 @@ z-index: 99999;
     z-index: 9999;
     top: 0;
 }
+
+
 #line2{
     position: absolute;
     height: 5px;
@@ -1096,6 +1194,28 @@ h4{
 
 
 
+#tip{
+  width: 60%;
+  height: 40px;
+  background-color: rgb(150, 62, 62);
+  filter: drop-shadow(0px 0px 50px black);
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 20px;
+  display: none;
+}
+
+h2{
+  color: rgb(249, 246, 246);
+  font-size: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 
 
@@ -1119,7 +1239,7 @@ h4{
 #button-green{
   padding: 20px;
   border-radius: 20px;
-  width: 200px;
+  width: 170px;
   background-color: #173800;
   border: transparent;
   transition: all 0.5s;
@@ -1128,7 +1248,7 @@ h4{
 }
 #button-green:hover{
   cursor: pointer;
-  width: 250px;
+  width: 200px;
   transition: all 0.5s;
   background-color: #317600;
 }
