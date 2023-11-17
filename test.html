@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrollbare Divs</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px; /* Abstand zwischen den beiden großen Divs */
+    }
+
+    .große-div {
+      width: 100%;
+      height: 300px;
+      overflow-x: auto;
+      white-space: nowrap;
+      background-color: #f0f0f0;
+    }
+
+    .kleine-div {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      background-color: #3498db;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" onwheel="scrollHorizontally(event)">
+    <div class="große-div" id="div1" onmouseenter="setActiveDiv('div1')" onmouseleave="setActiveDiv('')">
+      <!-- Füge hier deine kleinen Divs ein -->
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <!-- ... weitere kleine Divs ... -->
+    </div>
+
+    <div class="große-div" id="div2" onmouseenter="setActiveDiv('div2')" onmouseleave="setActiveDiv('')">
+      <!-- Füge hier deine anderen kleinen Divs ein -->
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <div class="kleine-div"></div>
+      <!-- ... weitere kleine Divs ... -->
+    </div>
+  </div>
+
+  <script>
+    var activeDivId = '';
+
+    function setActiveDiv(divId) {
+      activeDivId = divId;
+    }
+
+    function scrollHorizontally(event) {
+      event.preventDefault();
+      var delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+      var activeDiv = document.getElementById(activeDivId);
+
+      if (activeDiv) {
+        activeDiv.scrollLeft -= (delta * 40); // Ändere den Wert nach Bedarf
+      }
+    }
+  </script>
+
+</body>
+</html>
